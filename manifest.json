@@ -1,0 +1,29 @@
+{
+    "manifest_version":3,
+    "name":"simple clock",
+    "version":"0.1.1",
+    "description":"nannka",
+    "icons":{
+        "128":"my_icon.png"
+    },
+    "action":{
+        "default_icon":{
+            "19":"my_icon.png"
+        },
+        "default_title":"ichiri no clock"
+    },
+    "content_scripts":[{
+        "matches": ["<all_urls>"],
+        "js":["content.js"]
+    }],
+    "background": {
+        "matches": [
+        ],
+        "service_worker": "src/background.js"
+    },
+    "permissions":[
+        "storage"  
+    ],
+    "options_page": "option.html"
+
+}
